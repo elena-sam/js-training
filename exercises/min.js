@@ -10,7 +10,7 @@
  */
 
 // Your code :
-
+const min = (m, n) => m<n?m:n;
 //* Begin of tests
 const assert = require('assert')
 
