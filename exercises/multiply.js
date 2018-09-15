@@ -16,7 +16,7 @@ function multiply(n, m) {
   for (let i=0;i<x;i++) {
     total += y;
   }
-  return (n>=0&&m>=0 || n<=-1&&m<=-1)?total:-total;
+  return (n>0&&m>0 || n<=0&&m<=0)?total:-total;
 }
 //* Begin of tests
 const assert = require('assert')
