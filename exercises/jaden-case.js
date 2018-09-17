@@ -9,11 +9,23 @@
  * Example : "How are you ?" -> "How Are You ?"
  *
  */
+function jadenCase(s) {
+    let arr = s.toLowerCase().split(' ');
 
+    for (let i = 0; i < arr.length; i++) {
+        let word = arr[i].split("");
+        word[0] = word[0].toUpperCase();
+        arr[i] = word.join("");
+    }
+    return arr.join(" ");
+}
 
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof jadenCase, 'function')
+assert.strictEqual(jadenCase('hi friends!'), 'Hi Friends!')
+assert.strictEqual(jadenCase('me voiCi tout mouillé je suis un nageur!'), 'Me Voici Tout Mouillé Je Suis Un Nageur!')
+assert.strictEqual(jadenCase('BONNE NUIT LES PETITS !'), 'Bonne Nuit Les Petits !')
 // End of tests */
