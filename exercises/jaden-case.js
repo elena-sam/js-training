@@ -19,7 +19,7 @@ function jadenCase(s) {
     }
     return arr.join(" ");
 }
-
+//return sentence.split(' ').map(x => x[0].toUpperCase() + x.slice(1)).join(' ');
 
 //* Begin of tests
 const assert = require('assert')

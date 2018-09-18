@@ -10,6 +10,24 @@
  */
 
 // Your code :
+
+function multiply(n,m) {
+    if (n === 0 || m === 0) {
+      return 0;
+    }
+
+    if (n > 0) {
+        n--;
+        return m + multiply(n, m);
+    } 
+    else if (n < 0) {
+        n++;
+        return -m + multiply(n, m);
+    }
+
+}
+
+/*
 function multiply(n, m) { 
     if (Number.isInteger(m) && n === 0 || m === 0) {
         return 0;
@@ -31,7 +49,7 @@ function multiply(n, m) {
     sum = sum + m;
     return multiply(n, [m, sum]);
     
-}
+}*/
 //* Begin of tests
 const assert = require('assert')
 
